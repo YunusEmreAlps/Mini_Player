@@ -249,6 +249,9 @@ body {
   font-size: 20px;
   opacity: 0.5;
 }
+.progress__duration:hover {
+  color: white;
+}
 .progress__time {
   margin-top: 2px;
   color: #71829e;
@@ -256,7 +259,9 @@ body {
   font-size: 16px;
   opacity: 0.7;
 }
-
+.progress__time:hover {
+  color: white;
+}
 .progress__bar {
   height: 6px;
   width: 100%;
@@ -265,21 +270,30 @@ body {
   display: inline-block;
   border-radius: 10px;
 }
-
+.progress__bar:hover{
+  background-color:white;
+}
 .progress__current {
   height: inherit;
   width: 0%;
   background-color: #a3b3ce;
   border-radius: 10px;
 }
+.progress__current:hover {
+  background-color:orange;
+}
 
 .album-info {
-  color: #71829e;
+  color:#71829e;
   flex: 1;
   padding-top:50px;
   padding-right: 60px;
   user-select: none;
 }
+.album-info:hover {
+  color:white;
+}
+
 @media screen and (max-width: 576px), (max-height: 500px) {
   .album-info {
     padding-right: 30px;
