@@ -10,77 +10,96 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
-          name: "Mekanın Sahibi",
-          artist: "Norm Ender",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
-          favorited: false
+          name: "Nevermind",
+          artist: "Dennis Llyod",
+          cover: "./img/1.jpg",
+          source: "./mp3/1.mp3",
+          url: "./mp3/1.mp3",
         },
         {
-          name: "Everybody Knows",
-          artist: "Leonard Cohen",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          url: "https://www.youtube.com/watch?v=Lin-a2lTelg",
-          favorited: true
+          name: "Feels",
+          artist: "Calvin Harris",
+          cover: "./img/2.jpg",
+          source: "./mp3/2.mp3",
+          url: "./mp3/2.mp3",
         },
         {
-          name: "Extreme Ways",
-          artist: "Moby",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          url: "https://www.youtube.com/watch?v=ICjyAe9S54c",
-          favorited: false
-        },
-        {
-          name: "Butterflies",
+          name: "Audio",
           artist: "Sia",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          url: "https://www.youtube.com/watch?v=kYgGwWYOd9Y",
-          favorited: false
+          cover: "./img/3.jpg",
+          source:"./mp3/3.mp3",
+          url: "./mp3/3.mp3",
         },
         {
-          name: "The Final Victory",
-          artist: "Haggard",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          url: "https://www.youtube.com/watch?v=0WlpALnQdN8",
-          favorited: true
+          name: "Baby",
+          artist: "Clean Bandit",
+          cover: "./img/4.jpg",
+          source: "./mp3/4.mp3",
+          url: "./mp3/4.mp3",
         },
         {
-          name: "Genius ft. Sia, Diplo, Labrinth",
-          artist: "LSD",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          url: "https://www.youtube.com/watch?v=HhoATZ1Imtw",
-          favorited: false
+          name: "Brave",
+          artist: "Zayde Wolf",
+          cover: "./img/5.jpg",
+          source: "./mp3/5.mp3",
+          url: "./mp3/5.mp3",
         },
         {
-          name: "The Comeback Kid",
-          artist: "Lindi Ortega",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          url: "https://www.youtube.com/watch?v=me6aoX0wCV8",
-          favorited: true
+          name: "Sunflower",
+          artist: "Post Malone",
+          cover: "./img/6.jpg",
+          source:"./mp3/6.mp3",
+          url: "./mp3/6.mp3",
         },
         {
-          name: "Overdose",
-          artist: "Grandson",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          url: "https://www.youtube.com/watch?v=00-Rl3Jlx-o",
-          favorited: false
+          name: "Renegades",
+          artist: "X Ambassadors",
+          cover: "./img/7.jpg",
+          source: "./mp3/7.mp3",
+          url: "./mp3/7.mp3",
         },
         {
-          name: "Rag'n'Bone Man",
-          artist: "Human",
-          cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
-          source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
-          favorited: false
-        }
+          name: "Gimme shelter",
+          artist: "Rolling Stones",
+          cover: "./img/8.jpg",
+          source: "./mp3/8.mp3",
+          url: "./mp3/8.mp3",
+        },
+        {
+          name: "Mr. blue sky",
+          artist: "Electric Light Orchestra",
+          cover: "./img/9.jpg",
+          source: "./mp3/9.mp3",
+          url: "./mp3/9.mp3",
+        },
+        {
+          name: "Gimme shelter",
+          artist: "Rolling Stones",
+          cover: "./img/10.jpg",
+          source: "./mp3/10.mp3",
+          url: "./mp3/10.mp3",
+        },
+        {
+          name: "Someone you loved",
+          artist: "Lewis Capaldi",
+          cover: "./img/11.jpg",
+          source: "./mp3/11.mp3",
+          url: "./mp3/11.mp3",
+        },
+        {
+          name: "Woke up late",
+          artist: "Drax Project",
+          cover: "./img/12.jpg",
+          source: "./mp3/12.mp3",
+          url: "./mp3/12.mp3",
+        },
+        {
+          name: "Someone to you",
+          artist: "Banners",
+          cover: "./img/13.jpg",
+          source: "./mp3/13.mp3",
+          url: "./mp3/13.mp3",
+        },
       ],
       currentTrack: null,
       currentTrackIndex: 0,
@@ -176,11 +195,6 @@ new Vue({
         }
       }, 300);
     },
-    favorite() {
-      this.tracks[this.currentTrackIndex].favorited = !this.tracks[
-        this.currentTrackIndex
-      ].favorited;
-    }
   },
   created() {
     let vm = this;

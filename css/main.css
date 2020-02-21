@@ -32,7 +32,7 @@ body {
 }
 
 .player {
-  background: #eef3f7;
+  background-color:#343a40;
   width: 410px;
   min-height: 480px;
   box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
@@ -276,6 +276,7 @@ body {
 .album-info {
   color: #71829e;
   flex: 1;
+  padding-top:50px;
   padding-right: 60px;
   user-select: none;
 }
@@ -310,21 +311,6 @@ body {
   }
 }
 
-.github-btn {
-  position: absolute;
-  right: 40px;
-  bottom: 50px;
-  text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 30px -6px rgba(36, 52, 70, 0.65);
-  background: #24292e;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 16px;
-  transition: all 0.3s ease-in-out;
-}
 @media screen and (min-width: 500px) {
   .github-btn:hover {
     transform: scale(1.1);
@@ -332,17 +318,6 @@ body {
   }
 }
 @media screen and (max-width: 700px) {
-  .github-btn {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 20px;
-  }
-  .github-btn:active {
-    transform: scale(1.1);
-    box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
-  }
-}
 
 .scale-out-enter-active {
   transition: all 0.35s ease-in-out;
