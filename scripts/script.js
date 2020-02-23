@@ -196,6 +196,25 @@ new Vue({
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
     },
+    forceFileDownload(response){
+      let url = window.URL.createObjectURL(new Blob([response.data]))
+      let link = document.createElement('a')
+      link.href = url
+      link.setAttribute('download', 'music.mp3') //or any other extension
+      document.body.appendChild(link)
+      link.click()
+   },
+   downloadWithVueResource() {
+     this.$http({
+       method: 'get',
+       url:this.url,
+       responseType: 'arraybuffer'
+     })
+     .then(response => {
+       this.forceFileDownload(response)
+     })
+     .catch(() => console.log('error occured'))
+   },
     resetPlayer() {
       this.barWidth = 0;
       this.circleLeft = 0;
@@ -236,4 +255,5 @@ new Vue({
       document.head.appendChild(link)
     }
   }
+
 });
