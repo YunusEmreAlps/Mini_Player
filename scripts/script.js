@@ -15,6 +15,7 @@ new Vue({
           cover: "./img/1.jpg",
           source: "./mp3/1.mp3",
           url: "./mp3/1.mp3",
+          num:1,
         },
         {
           name: "Rather Be",
@@ -22,6 +23,7 @@ new Vue({
           cover: "./img/2.jpg",
           source: "./mp3/2.mp3",
           url: "./mp3/2.mp3",
+          num:2,
         },
         {
           name: "Audio",
@@ -29,6 +31,7 @@ new Vue({
           cover: "./img/3.jpg",
           source:"./mp3/3.mp3",
           url: "./mp3/3.mp3",
+          num:3,
         },
         {
           name: "Baby",
@@ -36,6 +39,7 @@ new Vue({
           cover: "./img/4.jpg",
           source: "./mp3/4.mp3",
           url: "./mp3/4.mp3",
+          num:4,
         },
         {
           name: "Brave",
@@ -43,6 +47,7 @@ new Vue({
           cover: "./img/5.jpg",
           source: "./mp3/5.mp3",
           url: "./mp3/5.mp3",
+          num:5,
         },
         {
           name: "Sunflower",
@@ -50,6 +55,7 @@ new Vue({
           cover: "./img/6.jpg",
           source:"./mp3/6.mp3",
           url: "./mp3/6.mp3",
+          num:6,
         },
         {
           name: "Renegades",
@@ -57,6 +63,7 @@ new Vue({
           cover: "./img/7.jpg",
           source: "./mp3/7.mp3",
           url: "./mp3/7.mp3",
+          num:7,
         },
         {
           name: "Gimme Shelter",
@@ -64,6 +71,7 @@ new Vue({
           cover: "./img/8.jpg",
           source: "./mp3/8.mp3",
           url: "./mp3/8.mp3",
+          num:8,
         },
         {
           name: "Mr. Blue Sky",
@@ -71,6 +79,7 @@ new Vue({
           cover: "./img/9.jpg",
           source: "./mp3/9.mp3",
           url: "./mp3/9.mp3",
+          num:9,
         },
         {
           name: "Come and Get Your Love",
@@ -78,6 +87,7 @@ new Vue({
           cover: "./img/10.jpg",
           source: "./mp3/10.mp3",
           url: "./mp3/10.mp3",
+          num:10,
         },
         {
           name: "Someone You Loved",
@@ -85,6 +95,7 @@ new Vue({
           cover: "./img/11.jpg",
           source: "./mp3/11.mp3",
           url: "./mp3/11.mp3",
+          num:11,
         },
         {
           name: "Woke Up Late",
@@ -92,6 +103,7 @@ new Vue({
           cover: "./img/12.jpg",
           source: "./mp3/12.mp3",
           url: "./mp3/12.mp3",
+          num:12,
         },
         {
           name: "Someone To You",
@@ -99,6 +111,7 @@ new Vue({
           cover: "./img/13.jpg",
           source: "./mp3/13.mp3",
           url: "./mp3/13.mp3",
+          num:13,
         },
         {
           name: "Yürek",
@@ -106,6 +119,7 @@ new Vue({
           cover: "./img/14.jpg",
           source: "./mp3/14.mp3",
           url: "./mp3/14.mp3",
+          num:14,
         },
         {
           name: "Koca yaşlı şişko dünya",
@@ -113,6 +127,7 @@ new Vue({
           cover: "./img/15.jpg",
           source: "./mp3/15.mp3",
           url: "./mp3/15.mp3",
+          num:15,
         },
       ],
       currentTrack: null,
@@ -197,8 +212,9 @@ new Vue({
       this.resetPlayer();
     },
     forceFileDownload(response){
-      let url = window.URL.createObjectURL(new Blob([response.data]))
-      let link = document.createElement('a')
+      const elt = this.tracks[this.currentTrackIndex]
+      const url ="https://github.com/YunusEmreAlps/mini-player/blob/gh-pages/mp3/"+elt.num+".mp3?raw=true"
+      const link = document.createElement('a')
       link.href = url
       link.setAttribute('download', 'music.mp3') //or any other extension
       document.body.appendChild(link)
