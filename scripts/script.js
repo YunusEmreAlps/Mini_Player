@@ -129,6 +129,30 @@ new Vue({
           url: "./mp3/15.mp3",
           num:15,
         },
+        {
+          name: "Fireball",
+          artist: "SYNAPSON",
+          cover: "./img/1.jpg",
+          source: "./mp3/16.mp3",
+          url: "./mp3/16.mp3",
+          num:16,
+        },
+        {
+          name: "Happiest Man on Earth",
+          artist: "Broken Back",
+          cover: "./img/2.jpg",
+          source: "./mp3/17.mp3",
+          url: "./mp3/17.mp3",
+          num:17,
+        },
+        {
+          name: "Halcyon Birds",
+          artist: "Broken Back",
+          cover: "./img/3.jpg",
+          source: "./mp3/18.mp3",
+          url: "./mp3/18.mp3",
+          num:18,
+        },
       ],
       currentTrack: null,
       currentTrackIndex: 0,
@@ -219,17 +243,6 @@ new Vue({
       link.setAttribute('download', 'music.mp3') //or any other extension
       document.body.appendChild(link)
       link.click()
-   },
-   downloadWithVueResource() {
-     this.$http({
-       method: 'get',
-       url:this.url,
-       responseType: 'arraybuffer'
-     })
-     .then(response => {
-       this.forceFileDownload(response)
-     })
-     .catch(() => console.log('error occured'))
    },
     resetPlayer() {
       this.barWidth = 0;
