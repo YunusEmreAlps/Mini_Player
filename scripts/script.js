@@ -8,6 +8,11 @@ new Vue({
       duration: null,
       currentTime: null,
       isTimerPlaying: false,
+      currentSeconds: 0,
+		  durationSeconds: 0,
+      previousVolume: 35,
+		  showVolume: false,
+		  volume: 100,
       tracks: [
         {
           name: "Nevermind",
@@ -159,6 +164,19 @@ new Vue({
       transitionName: null
     };
   },
+  computed: {
+    muted() {
+			return this.volume / 100 === 0;
+		},
+		percentComplete() {
+			return parseInt(this.currentSeconds / this.durationSeconds * 100);
+		}
+  },
+  watch: {
+		volume(value) {
+			this.audio.volume = this.volume / 100;
+		}
+	},
   methods: {
     play() {
       if (this.audio.paused) {
@@ -192,6 +210,14 @@ new Vue({
       this.duration = durmin + ":" + dursec;
       this.currentTime = curmin + ":" + cursec;
     },
+    mute() {
+			if (this.muted) {
+				return this.volume = this.previousVolume;
+			}
+
+			this.previousVolume = this.volume;
+			this.volume = 0;
+		},
     updateBar(x) {
       let progress = this.$refs.progress;
       let maxduration = this.audio.duration;
