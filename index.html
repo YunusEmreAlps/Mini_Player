@@ -66,7 +66,7 @@
             <div class="album-info" v-if="currentTrack">
               <div class="album-info__name">{{ currentTrack.artist }}</div>
               <div class="album-info__track" id="trackk">{{ currentTrack.name }}</div>
-              <!-- Music Visualizer -->
+              <!-- Audio Visualizer -->
               <div class="paused playing" id="music" @click="play" onclick="toggle(this)">
                 <span class="bar n1">A</span>
                 <span class="bar n2">B</span>
@@ -77,7 +77,7 @@
                 <span class="bar n7">G</span>
                 <span class="bar n8">H</span>
               </div>
-              <!-- Music Visualizer -->
+              <!-- Audio Visualizer -->
             </div>
             <div class="progress__duration">{{ duration }}</div>
           </div>
@@ -87,7 +87,6 @@
           <div class="progress__time">{{ currentTime }}</div>
         </div>
         <div style="margin-top: 15px;">
-          
           <div class="player__volume">
             <a v-on:click.prevent="" v-on:mouseenter="showVolume = true" v-on:mouseleave="showVolume = false" title="Volume" href="icon-volume">
               <div class="player__volume__icon">
@@ -98,15 +97,6 @@
               <input class="progress__duration" v-model.lazy.number="volume" v-show="showVolume" type="range" min="0" max="100"/>
             </a>
           </div>
-          
-          <!-- <div id="volume">
-            <a v-on:click.prevent="" v-on:mouseenter="showVolume = true" v-on:mouseleave="showVolume = false" title="Volume" href="icon-volume">
-              <svg class="icon" style="color: #a3b3ce; font-size: 30px; width: 30px; height:30px;">
-                <use xlink:href="#icon-volume"></use>
-              </svg>    
-              <input style="color: #6c757d!important;" v-model.lazy.number="volume" v-show="showVolume" type="range" min="0" max="100"/>
-            </a>
-          </div>-->
         </div>
         <div v-cloak></div>
       </div>
